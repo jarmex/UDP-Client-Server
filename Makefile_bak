@@ -1,0 +1,15 @@
+CC    = cc
+EXECS = listen2 speak2 TCPServer
+
+.c.o:
+	$(CC) $(CFLAGS) -w -c $*.c
+
+all:	$(EXECS)
+	@echo done.
+
+clean:
+	rm -f *.o
+
+cleaner: clean
+	rm -f $(EXECS)
+
